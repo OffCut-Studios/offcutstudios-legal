@@ -1,10 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Offcut Studios | Legal</title>
-  <meta name="description" content="Official legal information and privacy policies for games developed by Offcut Studios.">
+  <meta name="description"
+        content="Official legal information and privacy policies for games developed by Offcut Studios.">
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -14,15 +16,62 @@
       line-height: 1.7;
       color: #242424;
     }
+
     h1 { margin-bottom: 8px; }
+
+    h2 { margin-top: 36px; }
+
     p { color: #555; }
+
+    a { color: #2457a7; }
+
+    a:focus-visible {
+      outline: 2px solid #2457a7;
+      outline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <main>
     <h1>Offcut Studios</h1>
-    <p>Official legal information and privacy policies for games developed by Offcut Studios.</p>
-    <p>Our game-specific privacy policies will be published here.</p>
+    <p>
+      Official legal information and privacy policies
+      for games developed by Offcut Studios.
+    </p>
+
+    <section aria-labelledby="games-heading">
+      <h2 id="games-heading">Our Games</h2>
+      <h3>Dessert Merge Cafe</h3>
+
+      <p>
+        <a href="./dessert-merge-cafe/privacy-policy/">
+          Privacy Policy
+        </a>
+      </p>
+
+      <p>
+        <a href="./dessert-merge-cafe/data-deletion/">
+          Data Deletion Requests
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        Privacy inquiries:
+        <a href="mailto:studiosoffcut@gmail.com">
+          studiosoffcut@gmail.com
+        </a>
+      </p>
+      <p>&copy; Offcut Studios</p>
+    </footer>
   </main>
 </body>
 </html>
