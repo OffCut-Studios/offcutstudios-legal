@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
   <meta name="description"
-        content="Data deletion requests for Dessert Merge Cafe by Offcut Studios.">
+        content="Data Deletion Requests (Draft) for Dessert Merge Cafe by OffCut Studios.">
   <title>Dessert Merge Cafe | Data Deletion</title>
 
   <style>
-    :root { color-scheme: light; }
+    :root {
+      color-scheme: light;
+    }
+
     * { box-sizing: border-box; }
 
     body {
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       max-width: 720px;
       margin: 64px auto;
       padding: 0 24px;
       line-height: 1.7;
       color: #242424;
+      background-color: #ffffff;
     }
 
-    h1 { margin-bottom: 8px; }
+    h1 {
+      margin-bottom: 8px;
+      font-size: 2rem;
+    }
 
     h2 {
       margin-top: 36px;
       line-height: 1.35;
+      font-size: 1.35rem;
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-size: 1.1rem;
     }
 
     p, li { color: #444; }
 
-    a { color: #2457a7; }
+    a {
+      color: #2457a7;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
 
     a:focus-visible {
       outline: 2px solid #2457a7;
@@ -41,12 +60,30 @@
     .metadata {
       color: #666;
       font-size: 14px;
+      margin: 4px 0;
     }
 
     .draft-notice {
       padding: 14px 18px;
       border-left: 3px solid #9a6700;
       background: #fff8e6;
+      margin: 24px 0;
+    }
+
+    .security-notice {
+      padding: 14px 18px;
+      border-left: 3px solid #b3261e;
+      background: #fdf2f2;
+      margin: 20px 0;
+    }
+
+    ol, ul {
+      padding-left: 24px;
+      margin: 12px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
     footer {
@@ -65,168 +102,178 @@
 <body>
   <main>
     <nav aria-label="Breadcrumb">
-      <a href="../../">Offcut Studios Legal</a>
+      <a href="../../">OffCut Studios Legal</a>
     </nav>
 
     <h1>Data Deletion Requests</h1>
 
     <p class="metadata">
-      Dessert Merge Cafe | Offcut Studios
+      Dessert Merge Cafe | OffCut Studios
     </p>
 
     <p class="metadata">
       Status: Draft — deletion workflow pending implementation
     </p>
 
-    <p class="draft-notice">
-      This page describes the planned data deletion
-      process for Dessert Merge Cafe. Automated
-      account and cloud-data deletion is not yet
-      available.
+    <p class="metadata">
+      Last Updated: October 2026 (Draft)
     </p>
+
+    <div class="draft-notice" role="note" aria-label="Draft Notice">
+      <p><strong>DRAFT NOTICE:</strong> This page describes the planned data deletion procedure for Dessert Merge Cafe. It is currently in DRAFT status and is not effective for released builds.</p>
+      <p>The current game operates locally with the on-device Save V2 system. Firebase SDKs have been completely retired. Automated in-game deletion and cloud backend services are currently pending release and implementation. Data deletion requests are handled manually via email as detailed below.</p>
+    </div>
 
     <section>
       <h2>1. Overview</h2>
       <p>
-        Offcut Studios is committed to giving players
-        appropriate control over their game-related data.
+        OffCut Studios is committed to giving players meaningful control over their personal data. We provide mechanisms for players to request the deletion of eligible game-related data associated with <em>Dessert Merge Cafe</em>.
       </p>
       <p>
-        Dessert Merge Cafe plans to use Google Play
-        Games for player authentication and Firebase
-        Cloud Firestore for cloud-saved progress.
+        Currently, Dessert Merge Cafe operates locally using an offline save system (Save V2). As planned online services—including Google Play Games Services, Unity Authentication, Unity Cloud Save, and Unity Analytics—are introduced, cloud-stored records will be eligible for deletion upon verified request.
       </p>
     </section>
 
     <section>
-      <h2>2. How to Request Data Deletion</h2>
+      <h2>2. Understanding Data Categories and Storage</h2>
       <p>
-        You can contact Offcut Studios to ask about
-        deletion of your Dessert Merge Cafe data.
+        To understand how deletion applies to your data, it is necessary to distinguish between local device data, cloud services, and third-party account platforms:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Local Gameplay Progress (Save V2):</strong>
+          <br>
+          Your primary game save file (including board layout, coin balance, and unlocked recipes) resides directly on your Android device. OffCut Studios has no remote access to your device and cannot delete local files on your behalf.
+          <br>
+          <em>How to delete local data:</em> You can delete your local save at any time directly through your device settings: go to <strong>Settings &gt; Apps &gt; Dessert Merge Cafe &gt; Storage &amp; cache &gt; Clear Storage (Clear Data)</strong>, or by uninstalling the application.
+        </li>
+        <li>
+          <strong>Unity Cloud Save &amp; Authentication Records (Planned):</strong>
+          <br>
+          Once cloud services are implemented, backup game state and player authentication profiles will be stored on Unity Gaming Services servers linked to a unique Unity player ID. You may request the complete deletion of these cloud records by emailing us.
+        </li>
+        <li>
+          <strong>Unity Analytics Data (Planned):</strong>
+          <br>
+          If you opt in to optional analytics, Unity processes technical device specifications and session telemetry.
+          <br>
+          <em>Consent Withdrawal vs. Data Deletion:</em> Withdrawing analytics consent in the in-game Settings stops future collection under SDK controls, but does not automatically delete historical data previously transmitted to Unity. Deletion of previously collected analytics data must be requested separately through our deletion workflow.
+        </li>
+        <li>
+          <strong>Google Play Games Account Management:</strong>
+          <br>
+          Google Play Games Services is operated independently by Google LLC. Deleting game-related data from OffCut Studios or Unity does not delete your Google account or your Google Play Games profile. You can manage or delete your Google Play Games data directly via Google Play Games settings or your Google Account privacy dashboard.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How to Submit a Data Deletion Request</h2>
+      <p>
+        To request the deletion of your cloud-stored game records or analytics data, submit a request by email:
       </p>
 
       <ol>
         <li>
-          Email
+          Send an email to
           <a href="mailto:studiosoffcut@gmail.com?subject=Dessert%20Merge%20Cafe%20-%20Data%20Deletion%20Request">
             studiosoffcut@gmail.com
           </a>.
         </li>
         <li>
-          Use the subject:
-          <strong>
-            Dessert Merge Cafe - Data Deletion Request
-          </strong>.
+          Use the subject line:
+          <strong>Dessert Merge Cafe - Data Deletion Request</strong>.
         </li>
         <li>
-          Explain whether you want to delete your
-          game account and associated data, or
-          request deletion of specific eligible data.
+          In the body of your email, please specify the scope of your request:
+          <ul>
+            <li>Request deletion of all cloud-saved game progress (Unity Cloud Save &amp; Unity Authentication).</li>
+            <li>Request deletion of historical analytics telemetry (Unity Analytics).</li>
+            <li>Request deletion of all eligible cloud records across all services.</li>
+          </ul>
         </li>
         <li>
-          Follow any reasonable identity-verification
-          instructions provided by Offcut Studios.
+          Include your player identifier (such as your Unity Player ID or Analytics ID, which will be accessible in the in-game Settings menu once online features are implemented) to allow us to locate your records.
+        </li>
+      </ol>
+
+      <div class="security-notice" role="alert">
+        <p><strong>IMPORTANT SECURITY NOTICE:</strong> For your protection, never include passwords, Google account credentials, credit card numbers, government identification cards, or other sensitive documents in your email. OffCut Studios will never ask for your passwords or identity documents to fulfill a deletion request.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Operational Deletion Workflow</h2>
+      <p>
+        Because automated client-side deletion is not yet deployed, OffCut Studios manually processes and coordinates data deletion requests. Our operational fulfillment steps are as follows:
+      </p>
+
+      <ol>
+        <li>
+          <strong>Receipt and Verification:</strong> We log your deletion request and verify the provided player identifier against our backend systems. If further clarification is needed to locate your records, we will reply to your email without requesting sensitive information.
+        </li>
+        <li>
+          <strong>Cloud Save &amp; Account Deletion:</strong> For requests covering cloud progress, an administrator initiates the permanent deletion of player save data, state snapshots, and associated account credentials in the Unity Gaming Services dashboard and administrative APIs.
+        </li>
+        <li>
+          <strong>Analytics Data Erasure:</strong> For requests covering analytics, we submit a formal data erasure request through Unity's privacy and data management tools for the identified player or installation identifier.
+        </li>
+        <li>
+          <strong>Completion Notice:</strong> Once backend processing is finalized by the respective service providers, we will send an email confirmation that your eligible data has been purged.
         </li>
       </ol>
 
       <p>
-        Do not send passwords, authentication tokens,
-        government identification documents, or
-        other unnecessary sensitive information.
+        Requests are reviewed and processed reasonably without undue delay in accordance with applicable legal requirements.
       </p>
     </section>
 
     <section>
-      <h2>3. Planned In-Game Deletion</h2>
+      <h2>5. Status of In-Game Deletion Features</h2>
       <p>
-        Dessert Merge Cafe plans to provide an in-game
-        option for requesting deletion of game-related
-        account information and saved progress.
+        Please note the current development status regarding in-game controls:
       </p>
-      <p>
-        This functionality is not yet implemented.
-      </p>
-    </section>
-
-    <section>
-      <h2>4. Information That May Be Deleted</h2>
-      <p>
-        Depending on the services implemented and
-        the scope of a verified request, eligible
-        information may include:
-      </p>
-
       <ul>
-        <li>Game account association records.</li>
-        <li>Firebase cloud-saved player progress.</li>
-        <li>Stored virtual currency and upgrade data.</li>
-        <li>Unlocked content and progression records.</li>
-        <li>Eligible account-linked metadata.</li>
+        <li>An automated in-game deletion button is <strong>not currently implemented</strong> in the active game.</li>
+        <li>Unity's programmatic deletion API has not yet been integrated into the game client.</li>
+        <li>Consent toggles in game Settings (planned for analytics) allow you to withdraw consent from future data collection, but purging historical data requires submitting an email request as outlined above.</li>
       </ul>
     </section>
 
     <section>
-      <h2>5. Third-Party Information</h2>
+      <h2>6. Retention Exceptions</h2>
       <p>
-        Deleting Dessert Merge Cafe game-related
-        information does not automatically delete
-        your Google account or Google Play Games
-        profile.
+        When you request data deletion, eligible cloud game saves and analytics records will be deleted. However, certain limited information may be retained where strictly necessary to:
       </p>
-      <p>
-        Information held independently by Google,
-        Unity, or other service providers may be
-        subject to their separate privacy and
-        deletion procedures.
-      </p>
+      <ul>
+        <li>Demonstrate compliance with applicable data protection regulations (such as keeping a record of the fulfilled deletion request).</li>
+        <li>Resolve ongoing legal disputes or enforce our agreements.</li>
+        <li>Satisfy specific statutory, tax, or legal retention obligations under applicable law.</li>
+      </ul>
     </section>
 
     <section>
-      <h2>6. Retention and Processing</h2>
+      <h2>7. Privacy Policy and Related Inquiries</h2>
       <p>
-        Offcut Studios will establish appropriate
-        verification, deletion, and retention
-        procedures before releasing the planned
-        account and cloud-save features.
+        For detailed information on how data is handled across our planned services, please review our
+        <a href="../privacy-policy/">Dessert Merge Cafe Privacy Policy</a>.
       </p>
       <p>
-        Certain information may need to be retained
-        where required by applicable law or for
-        legitimate security and compliance purposes.
+        For any other privacy questions or general inquiries, please contact:
       </p>
       <p>
-        Specific retention periods and request
-        processing timelines have not yet been
-        finalized.
-      </p>
-    </section>
-
-    <section>
-      <h2>7. Privacy Policy</h2>
-      <p>
-        For more information, see the
-        <a href="../privacy-policy/">
-          Dessert Merge Cafe Privacy Policy
-        </a>.
-      </p>
-    </section>
-
-    <section>
-      <h2>8. Contact</h2>
-      <p>
-        Offcut Studios<br>
-        Email:
-        <a href="mailto:studiosoffcut@gmail.com">
-          studiosoffcut@gmail.com
-        </a>
+        <strong>OffCut Studios</strong><br>
+        Email: <a href="mailto:studiosoffcut@gmail.com">studiosoffcut@gmail.com</a><br>
+        Subject: Dessert Merge Cafe - Privacy Inquiry
       </p>
     </section>
 
     <footer>
       <p>
-        <a href="../../">Offcut Studios Legal</a>
+        <a href="../../">OffCut Studios Legal</a>
       </p>
-      <p>&copy; Offcut Studios</p>
+      <p>&copy; OffCut Studios. All rights reserved.</p>
     </footer>
   </main>
 </body>
