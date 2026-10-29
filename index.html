@@ -1,77 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Offcut Studios | Legal</title>
+  <title>OffCut Studios | Legal Center</title>
   <meta name="description"
-        content="Official legal information and privacy policies for games developed by Offcut Studios.">
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 720px;
-      margin: 80px auto;
-      padding: 0 24px;
-      line-height: 1.7;
-      color: #242424;
-    }
-
-    h1 { margin-bottom: 8px; }
-
-    h2 { margin-top: 36px; }
-
-    p { color: #555; }
-
-    a { color: #2457a7; }
-
-    a:focus-visible {
-      outline: 2px solid #2457a7;
-      outline-offset: 3px;
-    }
-
-    footer {
-      margin-top: 56px;
-      padding-top: 16px;
-      border-top: 1px solid #ddd;
-      font-size: 14px;
-    }
-  </style>
+        content="Official legal documentation, privacy policies, and data rights for games developed by OffCut Studios.">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <main>
-    <h1>Offcut Studios</h1>
-    <p>
-      Official legal information and privacy policies
-      for games developed by Offcut Studios.
-    </p>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <section aria-labelledby="games-heading">
-      <h2 id="games-heading">Our Games</h2>
-      <h3>Dessert Merge Cafe</h3>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="./" class="brand" aria-label="OffCut Studios Legal Home">
+        <span class="brand-icon" aria-hidden="true">◆</span>
+        <span>OffCut Studios</span>
+        <span class="brand-badge">Legal</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary Navigation">
+        <a href="#games" class="nav-link">Our Games</a>
+        <a href="mailto:studiosoffcut@gmail.com" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <p>
-        <a href="./dessert-merge-cafe/privacy-policy/">
-          Privacy Policy
-        </a>
-      </p>
-
-      <p>
-        <a href="./dessert-merge-cafe/data-deletion/">
-          Data Deletion Requests
-        </a>
+  <main id="main-content" class="main-wrapper">
+    <section class="hero-section">
+      <div class="badge-row" style="justify-content: center;">
+        <span class="badge badge-platform">Player Transparency &amp; Privacy Hub</span>
+      </div>
+      <h1 class="hero-title">Legal &amp; Privacy Center</h1>
+      <p class="hero-subtitle">
+        Official policies, data governance, and player privacy rights for games developed and published by OffCut Studios.
       </p>
     </section>
 
-    <footer>
-      <p>
-        Privacy inquiries:
-        <a href="mailto:studiosoffcut@gmail.com">
-          studiosoffcut@gmail.com
+    <section id="games" aria-labelledby="games-heading" style="margin-top: 20px;">
+      <h2 id="games-heading" style="border-bottom: none; font-size: 1.6rem; margin-bottom: 20px;">Our Games</h2>
+
+      <div class="games-grid">
+        <article class="game-hub-card">
+          <div class="game-card-header">
+            <div>
+              <div class="badge-row">
+                <span class="badge badge-platform">Android / Google Play</span>
+                <span class="badge badge-draft">Policies in Draft</span>
+              </div>
+              <h3 class="game-card-title">Dessert Merge Cafe</h3>
+            </div>
+          </div>
+          <p>
+            A cozy casual merge game for Android where players restore a charming cafe, merge tasty sweets, and unlock delicious recipes. Current builds operate completely offline using our local Save V2 architecture.
+          </p>
+
+          <div class="game-links-grid">
+            <a href="./dessert-merge-cafe/privacy-policy/" class="game-doc-link">
+              <div class="game-doc-title">
+                <span>Privacy Policy</span>
+                <span aria-hidden="true">&rarr;</span>
+              </div>
+              <p class="game-doc-desc">
+                Review data handling practices, local saves, and planned online service disclosures.
+              </p>
+              <div style="margin-top: 12px;">
+                <span class="badge badge-draft">Draft — Not Effective</span>
+              </div>
+            </a>
+
+            <a href="./dessert-merge-cafe/data-deletion/" class="game-doc-link">
+              <div class="game-doc-title">
+                <span>Data Deletion Requests</span>
+                <span aria-hidden="true">&rarr;</span>
+              </div>
+              <p class="game-doc-desc">
+                Learn how to clear local device saves or submit requests to delete cloud and analytics data.
+              </p>
+              <div style="margin-top: 12px;">
+                <span class="badge badge-draft">Draft Procedure</span>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top: 48px;">
+      <h2 style="font-size: 1.35rem; margin-bottom: 16px;">Our Privacy Commitments</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-status feature-status-active">Offline First</span>
+          <h4 class="feature-title">Local Save Protection</h4>
+          <p class="feature-desc">
+            Your primary gameplay progress is stored directly on your device via Save V2, ensuring complete offline play without mandatory accounts.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-status feature-status-active">Explicit Consent</span>
+          <h4 class="feature-title">Opt-In Telemetry</h4>
+          <p class="feature-desc">
+            We do not engage in silent background tracking. Upcoming analytics will require explicit opt-in and will never block or degrade gameplay.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-status feature-status-active">Player Control</span>
+          <h4 class="feature-title">Easy Data Deletion</h4>
+          <p class="feature-desc">
+            Players have full control to clear local device saves or request prompt deletion of cloud and analytics records without hassle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 36px;">
+      <div class="action-box">
+        <div class="action-box-text">
+          <h4>Have a Privacy Inquiry?</h4>
+          <p>Questions regarding our legal terms, data handling, or player rights? We are here to help.</p>
+        </div>
+        <a href="mailto:studiosoffcut@gmail.com" class="btn btn-primary">
+          Contact Privacy Team
         </a>
-      </p>
-      <p>&copy; Offcut Studios</p>
-    </footer>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <p><strong>OffCut Studios Legal Portal</strong></p>
+        <p style="margin: 4px 0 0; font-size: 0.85rem; color: var(--color-text-subtle);">
+          Dedicated to player trust, transparent governance, and data protection.
+        </p>
+      </div>
+      <div class="footer-nav">
+        <a href="./">Home</a>
+        <a href="./dessert-merge-cafe/privacy-policy/">Privacy Policy</a>
+        <a href="./dessert-merge-cafe/data-deletion/">Data Deletion</a>
+        <a href="mailto:studiosoffcut@gmail.com">studiosoffcut@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-container" style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border); font-size: 0.8rem;">
+      <p>&copy; OffCut Studios. All rights reserved.</p>
+      <p>Android and Google Play are trademarks of Google LLC.</p>
+    </div>
+  </footer>
 </body>
 </html>
