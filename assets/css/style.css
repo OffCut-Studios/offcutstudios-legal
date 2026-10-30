@@ -206,13 +206,6 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-@media (max-width: 640px) {
-  .doc-card {
-    padding: 28px 20px;
-    border-radius: var(--radius-md);
-  }
-}
-
 /* Hero & Header Section */
 .doc-header {
   margin-bottom: 36px;
@@ -743,4 +736,477 @@ li strong {
 
 .footer-nav a:hover {
   color: var(--color-primary);
+}
+
+/* =============================================
+   MOBILE HAMBURGER MENU
+   ============================================= */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  cursor: pointer;
+  color: var(--color-text-main);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-toggle:hover {
+  background: var(--color-surface-subtle);
+  border-color: var(--color-border-hover);
+}
+
+.menu-toggle[aria-expanded="true"] .hamburger-icon {
+  display: none;
+}
+
+.menu-toggle[aria-expanded="true"] .close-icon {
+  display: inline;
+}
+
+.menu-toggle[aria-expanded="false"] .close-icon,
+.menu-toggle .close-icon {
+  display: none;
+}
+
+/* =============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================= */
+
+/* --- Tablet & small desktop (max 768px) --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-section {
+    padding: 36px 0 28px;
+  }
+
+  .doc-title {
+    font-size: 1.85rem;
+  }
+
+  .doc-card {
+    padding: 36px 28px;
+  }
+
+  .main-wrapper {
+    margin: 32px auto 60px;
+  }
+
+  .game-hub-card {
+    padding: 28px;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    margin-top: 36px;
+  }
+}
+
+/* --- Mobile (max 640px) --- */
+@media (max-width: 640px) {
+  /* Header & hamburger menu */
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 8px 24px 16px;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: var(--shadow-md);
+    z-index: 99;
+  }
+
+  .site-nav.nav-open {
+    display: flex;
+  }
+
+  .site-header {
+    position: sticky;
+  }
+
+  .header-container {
+    position: relative;
+    padding: 12px 16px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link:hover {
+    background: var(--color-surface-subtle);
+  }
+
+  /* Brand */
+  .brand {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .brand-badge {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+  }
+
+  .brand-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb-container {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  /* Main content */
+  .main-wrapper {
+    margin: 24px auto 48px;
+    padding: 0 16px;
+  }
+
+  .doc-card {
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  /* Doc header */
+  .doc-title {
+    font-size: 1.6rem;
+  }
+
+  .doc-subtitle {
+    font-size: 1rem;
+  }
+
+  .metadata-bar {
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  /* Badge row */
+  .badge-row {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-section {
+    padding: 28px 0 24px;
+  }
+
+  /* Quick navigation */
+  .quick-nav {
+    padding: 14px 16px;
+    margin: 24px 0;
+  }
+
+  .quick-nav-title {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .quick-nav-links {
+    gap: 6px;
+  }
+
+  .quick-nav-btn {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 22px;
+  }
+
+  /* Feature grid */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .feature-card {
+    padding: 16px;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+  }
+
+  .feature-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Step items */
+  .step-item {
+    padding-left: 46px;
+    margin-bottom: 20px;
+  }
+
+  .step-item::before {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .step-title {
+    font-size: 0.975rem;
+  }
+
+  .step-desc {
+    font-size: 0.875rem;
+  }
+
+  /* Game hub card */
+  .game-hub-card {
+    padding: 20px 16px;
+  }
+
+  .game-card-title {
+    font-size: 1.3rem;
+  }
+
+  .game-links-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .game-doc-link {
+    padding: 16px;
+  }
+
+  .game-doc-title {
+    font-size: 0.975rem;
+  }
+
+  .game-doc-desc {
+    font-size: 0.825rem;
+  }
+
+  /* Callout */
+  .callout {
+    padding: 14px 16px;
+    margin: 20px 0;
+    gap: 10px;
+  }
+
+  .callout-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .callout-content {
+    font-size: 0.875rem;
+  }
+
+  /* Buttons — full width on mobile */
+  .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-height: 48px;
+    justify-content: center;
+  }
+
+  /* Action box */
+  .action-box {
+    padding: 20px 16px;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .action-box-text h4 {
+    font-size: 1rem;
+  }
+
+  .action-box-text p {
+    font-size: 0.85rem;
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+
+  li {
+    margin-bottom: 8px;
+    font-size: 0.925rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 28px 16px;
+    margin-top: 48px;
+  }
+
+  .footer-container {
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-nav {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .footer-nav a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* --- Small mobile (max 380px) --- */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .doc-title {
+    font-size: 1.4rem;
+  }
+
+  .doc-card {
+    padding: 20px 14px;
+  }
+
+  .main-wrapper {
+    padding: 0 12px;
+  }
+
+  .header-container {
+    padding: 10px 12px;
+  }
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
+  .quick-nav-btn {
+    font-size: 0.72rem;
+    padding: 5px 8px;
+  }
+
+  .metadata-bar {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+
+  /* Hide bullet separator in metadata on very small screens */
+  .metadata-bar > span:nth-child(2) {
+    display: none;
+  }
+
+  .step-item {
+    padding-left: 40px;
+  }
+
+  .step-item::before {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+
+  .game-card-title {
+    font-size: 1.15rem;
+  }
+
+  .feature-card {
+    padding: 14px;
+  }
+}
+
+/* =============================================
+   TOUCH & ACCESSIBILITY ENHANCEMENTS
+   ============================================= */
+
+/* Ensure all interactive elements meet 44x44px minimum tap target */
+@media (pointer: coarse) {
+  .nav-link,
+  .quick-nav-btn,
+  .btn,
+  .footer-nav a,
+  .game-doc-link {
+    min-height: 44px;
+  }
+
+  /* Slightly larger touch targets for step number circles */
+  .step-item::before {
+    min-width: 36px;
+    min-height: 36px;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .game-doc-link:hover {
+    transform: none;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
 }
